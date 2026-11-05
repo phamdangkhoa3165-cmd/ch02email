@@ -9,7 +9,6 @@ import jakarta.servlet.http.*;
 import org.example.model.business.User;
 import org.example.model.data.UserDB;
 
-@WebServlet("/emailList")
 public class EmailListServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException,IOException {
