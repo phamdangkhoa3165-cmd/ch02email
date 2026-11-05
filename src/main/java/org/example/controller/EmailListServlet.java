@@ -20,7 +20,7 @@ public class EmailListServlet extends HttpServlet {
         }
 
         if (action.equals("join")) {
-            url = "index.html";
+            url = "/index.html";
         }
         else if (action.equals("add")) {
             String firstName = req.getParameter("firstName");
