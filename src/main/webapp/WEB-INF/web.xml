@@ -20,7 +20,6 @@
     <!-- 3. Cấu hình trang mặc định khi mở trang web -->
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
-        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
 </web-app>
