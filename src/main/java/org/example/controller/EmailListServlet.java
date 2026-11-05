@@ -31,11 +31,15 @@ public class EmailListServlet extends HttpServlet {
             User user = new User(firstName, lastName, email);
             UserDB.insert(user);
 
-            req.setAttribute("user", user);
+            // Trong Servlet: Lấy ra session hiện tại từ người dùng
+            HttpSession session = req.getSession();
+
+            // Lưu thông tin người dùng vào Session (tồn tại trên Server 30 phút)
+            session.setAttribute("user", user);
             url = "/thanks.jsp";
         }
 
-        getServletContext().getRequestDispatcher(url).forward(req, resp);
+        resp.sendRedirect(req.getContextPath() + url);
     }
 
     @Override
