@@ -10,13 +10,13 @@ public class DBContext {
 
         String url = System.getenv("DB_URL") != null
                 ? System.getenv("DB_URL")
-                : "jdbc:postgresql://ep-silent-breeze-aojgv1lv-pooler.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require";
+                : "jdbc:postgresql://localhost:5432/ch02email";
         String user = System.getenv("DB_USER") != null
                 ? System.getenv("DB_USER")
-                : "neondb_owner";
+                : "postgres";
         String pass = System.getenv("DB_PASS") != null
                 ? System.getenv("DB_PASS")
-                : "npg_fmcwk1AM6SLx";
+                : "Khoa@1201";
 
         return DriverManager.getConnection(url, user, pass);
     }
